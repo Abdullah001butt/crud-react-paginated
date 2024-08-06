@@ -3,7 +3,7 @@ import axios from "axios";
 export async function fetchPosts(page = 1, pageSize = 2) {
   try {
     const response = await axios.get(
-      `http://localhost:3000/posts?_page=${page}&_limit=${pageSize}`
+      `http://localhost:3000/posts?_page=${page}&_per_page=${pageSize}`
     );
     return response.data;
   } catch (error) {
